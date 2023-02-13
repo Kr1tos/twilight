@@ -5,6 +5,8 @@ homepage = "https://twilight.rs/"
 keywords = ["discord", "discord-api", "twilight"]
 name = "twilight-validate"
 version = "0.15.0"
+edition = "2021"
+
 
 [dependencies]
 twilight-model = { default-features = false, path = "../twilight-model", version = "0.15.0" }
