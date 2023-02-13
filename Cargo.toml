@@ -24,3 +24,17 @@ include = ["src/**/*.rs", "README.md"]
 license = "ISC"
 repository = "https://github.com/twilight-rs/twilight.git"
 rust-version = "1.64"
+
+[workspace.dependencies]
+twilight = {path = "twilight"}
+twilight-cache-inmemory = {path = "twilight-cache-inmemory"}
+twilight-gateway = {path = "twilight-gateway"}
+twilight-gateway-queue = {path = "twilight-gateway-queue"}
+twilight-http = {path = "twilight-http"}
+twilight-http-ratelimiting = {path = "twilight-http-ratelimiting"}
+twilight-lavalink = {path = "twilight-lavalink"}
+twilight-mention = {path = "twilight-mention"}
+twilight-model = {path = "twilight-model"}
+twilight-standby = {path = "twilight-standby"}
+twilight-util = {path = "twilight-util"}
+twilight-validate = {path = "twilight-validate"}
