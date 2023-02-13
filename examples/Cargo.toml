@@ -1,6 +1,4 @@
 [package]
-authors.workspace = true
-edition.workspace = true
 name = "examples"
 publish = false
 version = "0.0.0"

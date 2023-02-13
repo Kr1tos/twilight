@@ -1,16 +1,9 @@
 [package]
-authors.workspace = true
 categories = ["asynchronous"]
 description = "Utility to filter wait for filtered incoming events for the Twilight ecosystem."
-edition.workspace = true
 homepage = "https://twilight.rs/chapter_1_crates/section_6_standby.html"
-include.workspace = true
 keywords = ["discord", "discord-api", "twilight"]
-license.workspace = true
 name = "twilight-standby"
-publish = true
-repository.workspace = true
-rust-version.workspace = true
 version = "0.15.0"
 
 [dependencies]

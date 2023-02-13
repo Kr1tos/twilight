@@ -1,16 +1,9 @@
 [package]
-authors.workspace = true
 categories = ["caching"]
 description = "In-process-memory based cache for the Twilight ecosystem."
-edition.workspace = true
 homepage = "https://twilight.rs/chapter_1_crates/section_4_cache_inmemory.html"
-include.workspace = true
 keywords = ["discord", "discord-api", "twilight"]
-license.workspace = true
 name = "twilight-cache-inmemory"
-publish = true
-repository.workspace = true
-rust-version.workspace = true
 version = "0.15.0"
 
 [dependencies]

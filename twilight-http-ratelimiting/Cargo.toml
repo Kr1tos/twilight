@@ -1,16 +1,9 @@
 [package]
-authors.workspace = true
 categories = ["api-bindings", "asynchronous"]
 description = "Discord REST API ratelimiter implementations for the Twilight ecosystem."
-edition.workspace = true
 homepage = "https://twilight.rs/"
-include.workspace = true
 keywords = ["discord", "discord-api", "twilight"]
-license.workspace = true
 name = "twilight-http-ratelimiting"
-publish = true
-repository.workspace = true
-rust-version.workspace = true
 version = "0.15.0"
 
 [dependencies]

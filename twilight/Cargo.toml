@@ -1,15 +1,8 @@
 [package]
-authors.workspace = true
 description = "Advertisement crate for the twilight ecosystem; please use the individual crates instead."
-edition.workspace = true
 homepage = "https://twilight.rs"
-include.workspace = true
 keywords = ["discord", "discord-api", "twilight"]
-license.workspace = true
 name = "twilight"
-publish = true
-repository.workspace = true
-rust-version.workspace = true
 version = "0.15.0"
 
 [dev-dependencies]

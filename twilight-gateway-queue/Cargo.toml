@@ -1,15 +1,8 @@
 [package]
-authors.workspace = true
 description = "Discord Gateway connection queue implementation for the Twilight ecosystem."
-edition.workspace = true
 homepage = "https://twilight.rs/"
-include.workspace = true
 keywords = ["discord", "discord-api", "twilight"]
-license.workspace = true
 name = "twilight-gateway-queue"
-publish = true
-repository.workspace = true
-rust-version.workspace = true
 version = "0.15.0"
 
 [dependencies]

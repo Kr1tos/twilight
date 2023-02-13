@@ -1,15 +1,8 @@
 [package]
-authors.workspace = true
 description = "Miscellaneous utilities for Twilight."
-edition.workspace = true
 homepage = "https://twilight.rs"
-include.workspace = true
 keywords = ["discord", "discord-api", "twilight"]
-license.workspace = true
 name = "twilight-util"
-publish = true
-repository.workspace = true
-rust-version.workspace = true
 version = "0.15.0"
 
 [dependencies]
