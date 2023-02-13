@@ -61,6 +61,8 @@ pub fn parse(
 
     let event_type = gateway_deserializer.event_type();
     println!("{:?}", event_type);
+    println!("{:?}", EventTypeFlags::try_from((opcode, event_type)));
+
 
     let event_type = if let Ok(event_type) = EventTypeFlags::try_from((opcode, event_type)) {
         event_type
