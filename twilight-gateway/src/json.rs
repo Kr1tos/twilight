@@ -41,6 +41,7 @@ pub fn parse(
         if let Some(gateway_deserializer) = GatewayEventDeserializer::from_json(&event) {
             gateway_deserializer
         } else {
+            println!("{}", gateway_deserializer);
             return Err(ReceiveMessageError {
                 kind: ReceiveMessageErrorType::Deserializing { event },
                 source: Some("missing opcode".into()),
