@@ -41,8 +41,7 @@ pub fn parse(
         if let Some(gateway_deserializer) = GatewayEventDeserializer::from_json(&event) {
             gateway_deserializer
         } else {
-            println!("{:?}", GatewayEventDeserializer::from_json(&event));
-            println!("{}", event);
+
             return Err(ReceiveMessageError {
                 kind: ReceiveMessageErrorType::Deserializing { event },
                 source: Some("missing opcode".into()),
@@ -61,6 +60,7 @@ pub fn parse(
     };
 
     let event_type = gateway_deserializer.event_type();
+    println!("{:?}", event_type);
 
     let event_type = if let Ok(event_type) = EventTypeFlags::try_from((opcode, event_type)) {
         event_type
