@@ -35,7 +35,7 @@ use twilight_model::gateway::{
 /// [`Shard::next_message`]: crate::Shard::next_message
 pub fn parse(
     event: String,
-    wanted_event_types: EventTypeFlags,
+    _wanted_event_types: EventTypeFlags,
 ) -> Result<Option<GatewayEvent>, ReceiveMessageError> {
     let gateway_deserializer =
         if let Some(gateway_deserializer) = GatewayEventDeserializer::from_json(&event) {
@@ -48,7 +48,7 @@ pub fn parse(
             });
         };
 
-    let opcode = if let Some(opcode) = OpCode::from(gateway_deserializer.op()) {
+    let _opcode = if let Some(opcode) = OpCode::from(gateway_deserializer.op()) {
         opcode
     } else {
         let opcode = gateway_deserializer.op();
@@ -61,22 +61,23 @@ pub fn parse(
 
     let event_type = gateway_deserializer.event_type();
     println!("{:?}", event_type);
-    println!("{:?}", EventTypeFlags::try_from((opcode, event_type)));
+    // let gg = EventTypeFlags::from(event_type);
+    // println!("{:?}", EventTypeFlags::try_from((opcode, event_type)));
 
 
-    let event_type = if let Ok(event_type) = EventTypeFlags::try_from((opcode, event_type)) {
-        event_type
-    } else {
-        let opcode = opcode as u8;
-        let source = format!("unknown opcode/dispatch event type: {opcode}/{event_type:?}");
+    // let event_type = if let Ok(event_type) = EventTypeFlags::try_from((opcode, event_type)) {
+    //     event_type
+    // } else {
+    //     let opcode = opcode as u8;
+    //     let source = format!("unknown opcode/dispatch event type: {opcode}/{event_type:?}");
 
-        return Err(ReceiveMessageError {
-            kind: ReceiveMessageErrorType::Deserializing { event },
-            source: Some(source.into()),
-        });
-    };
+    //     return Err(ReceiveMessageError {
+    //         kind: ReceiveMessageErrorType::Deserializing { event },
+    //         source: Some(source.into()),
+    //     });
+    // };
 
-    if wanted_event_types.contains(event_type) {
+    // if wanted_event_types.contains(event_type) {
         #[cfg(feature = "simd-json")]
         let gateway_deserializer = gateway_deserializer.into_owned();
         #[cfg(feature = "simd-json")]
@@ -110,7 +111,7 @@ pub fn parse(
                 },
                 source: Some(Box::new(source)),
             })
-    } else {
-        Ok(None)
-    }
+    // } else {
+    //     Ok(None)
+    // }
 }
