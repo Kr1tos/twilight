@@ -87,6 +87,7 @@ pub fn parse(
         let mut json_deserializer = match simd_json::Deserializer::from_slice(&mut bytes) {
             Ok(deserializer) => deserializer,
             Err(source) => {
+                println!("{}", source);
                 return Err(ReceiveMessageError {
                     kind: ReceiveMessageErrorType::Deserializing {
                         event: String::from_utf8_lossy(&bytes).into_owned(),
