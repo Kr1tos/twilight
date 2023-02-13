@@ -4,6 +4,7 @@ homepage = "https://twilight.rs/"
 keywords = ["discord", "discord-api", "twilight"]
 name = "twilight-gateway-queue"
 version = "0.15.0"
+edition = "2021"
 
 [dependencies]
 tokio = { default-features = false, features = ["rt", "sync", "time"], version = "1.0" }

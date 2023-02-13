@@ -5,6 +5,7 @@ homepage = "https://twilight.rs/chapter_1_crates/section_3_gateway.html"
 keywords = ["discord", "discord-api", "twilight"]
 name = "twilight-gateway"
 version = "0.15.0"
+edition = "2021"
 
 [dependencies]
 bitflags = { default-features = false, version = "1" }

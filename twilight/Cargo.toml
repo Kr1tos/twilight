@@ -4,6 +4,7 @@ homepage = "https://twilight.rs"
 keywords = ["discord", "discord-api", "twilight"]
 name = "twilight"
 version = "0.15.0"
+edition = "2021"
 
 [dev-dependencies]
 anyhow = { default-features = false, features = ["std"], version = "1" }

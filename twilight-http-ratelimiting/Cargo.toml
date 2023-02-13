@@ -5,6 +5,7 @@ homepage = "https://twilight.rs/"
 keywords = ["discord", "discord-api", "twilight"]
 name = "twilight-http-ratelimiting"
 version = "0.15.0"
+edition = "2021"
 
 [dependencies]
 futures-util = { version = "0.3", default-features = false }
